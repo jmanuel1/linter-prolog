@@ -5,7 +5,7 @@ module.exports = class LinterProvider
   swi_regex = ///
     (\w+):  #The type of issue being reported.
     \s+     #A space.
-    [^\:]+:  #The file with issue.
+    (?:\w:)?[^\:]+:  #The file with issue.
     (\d+):  #The line number with issue.
     ((\d+):)?  #The column number with issue.
     \s+     #A space.
